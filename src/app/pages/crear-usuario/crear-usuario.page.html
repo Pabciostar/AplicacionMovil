@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="barra">
+    <ion-title>Registro de usuario</ion-title>
+
+    <ion-buttons slot="start" (click)="login()">
+        <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding fondo">
+  <ion-item class="input-container" lines="none">
+    <ion-input class="input" [(ngModel)]="mdl_correo" label="Correo electrónico" labelPlacement="floating"></ion-input>
+  </ion-item>
+  <ion-item class="input-container" lines="none">
+    <ion-input class="input" [(ngModel)]="mdl_password" label="Contraseña" labelPlacement="floating"></ion-input>
+  </ion-item>
+  <ion-item class="input-container" lines="none">
+    <ion-input class="input" [(ngModel)]="mdl_nombre" label="Nombre" labelPlacement="floating"></ion-input>
+  </ion-item>
+  <ion-item class="input-container" lines="none">
+    <ion-input class="input" [(ngModel)]="mdl_apellido" label="apellido" labelPlacement="floating"></ion-input>
+  </ion-item>
+  <ion-item class="input-container" lines="none">
+    <ion-input class="input" [(ngModel)]="mdl_carrera" label="Carrera" labelPlacement="floating"></ion-input>
+  </ion-item>
+  <ion-button expand="block" class="boton" (click)="crearUsuario()"> 
+    Registrar 
+  </ion-button>
+
+  <ion-item class="item-warning" lines="none" *ngIf = "mostrar_mensaje">
+    {{mensaje}}
+  </ion-item>
+
+</ion-content>

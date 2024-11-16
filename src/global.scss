@@ -35,3 +35,85 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
+
+.barra {
+    --background: #B22222;
+    --color: #FFFFFF;
+}
+
+.fondo {
+    --background: #F8F8F8;
+}
+
+.boton {
+    --background: #B22222;
+    --color: #FFFFFF;
+    margin-top: 10px;
+    height: 56px;
+}
+
+.input {
+  --color: #2F2F2F;                 
+  --placeholder-color: ;     
+  --highlight-color-valid: #B22222;
+}
+
+.input-container {
+  --background: #F8F8F8;         
+  --focus-border-color: #B22222;
+  border: 2px solid #C0C0C0;
+  border-radius: 5px;
+  margin-top: 5px;
+  width: 99%;
+  margin-left: auto;
+  margin-right: auto;  
+}
+
+.item-warning {
+    --background: #FFF3CD;
+    --color: #2F2F2F;
+    border: 0.5px solid #FFC107;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.item-success {
+  --background: #DFF2BF; /* Fondo verde claro */
+  --color: #4F8A10; /* Texto verde oscuro */
+  border: 1px solid #4F8A10; /* Borde verde */
+  padding: 10px;
+  border-radius: 5px; /* Opcional: redondear esquinas */
+}
+
+
+ion-card {
+    background-color: #F8F8F8; /* Color de fondo gris plateado */
+    border: 1px solid #D4AF37; /* Borde dorado */
+    border-radius: 10px; /* Bordes redondeados opcional */
+    padding: 10px 20px;
+    box-shadow: 10px 10px 50px -20px rgba(0,0,0,0.6);
+    ion-card-header {
+      background-color: #A9A9A9; /* Color más oscuro para el header */
+      color: #2F2F2F; /* Color de texto blanco en el header */
+      padding: 10px; /* Espaciado dentro del header */
+      border-bottom: 1px solid #D4AF37; /* Borde inferior dorado */
+    }
+  
+    ion-card-title {
+      font-weight: bold; /* Texto en negrita para el título */
+      font-size: 1.2rem; /* Tamaño de fuente del título */
+      color: #2F2F2F;
+    }
+  
+    ion-card-content {
+      padding: 15px; /* Espaciado interno para el contenido */
+      font-size: 1rem; /* Tamaño de fuente para el contenido */
+      color: #2F2F2F; /* Color de texto */
+    }
+  }
+
+p {
+  color: #2F2F2F;
+  font-size: 20px;
+}
+

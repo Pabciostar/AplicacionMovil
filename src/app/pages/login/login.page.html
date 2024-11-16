@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="barra">
+    <ion-title>Login</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="navegarCrearUsuario()"> 
+        <ion-icon slot="icon-only" name="person-add-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding fondo">
+  <ion-item class="input-container" lines="none">
+    <ion-input class="input" [(ngModel)]="mdl_correo" label="Correo electrónico" labelPlacement="floating"></ion-input>
+  </ion-item>
+  <ion-item class="input-container" lines="none">
+    <ion-input class="input" [(ngModel)]="mdl_contrasena" label="Contraseña" labelPlacement="floating"></ion-input>
+  </ion-item>
+  <ion-button expand="block" (click)="login()" class="boton"> 
+    Ingresar 
+  </ion-button>
+
+  <ion-item class="item-warning" lines="none" *ngIf = "mostrar_mensaje" >
+    {{ mensaje }}
+  </ion-item>
+  
+
+</ion-content>

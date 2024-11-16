@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="barra">
+    <ion-title>Bienvenido: {{ nombre }}  {{apellido}}</ion-title>
+    
+    <ion-buttons slot="start" (click)="login()">
+      <ion-button>
+        <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end" (click)="info_usuario()">
+      <ion-button> 
+        <ion-icon slot="icon-only" name="person-circle-sharp"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding fondo">
+  <div *ngIf="info_sedes && info_sedes[0]">
+    <div *ngFor="let sede of info_sedes[0]; let i = index">
+        <ion-card class="card-principal">
+          <h2>{{ sede.NOMBRE }}</h2>
+          <p><strong>Dirección:</strong> {{ sede.DIRECCION }}</p>
+          <p><strong>Teléfono:</strong> {{ sede.TELEFONO }}</p>
+          <p><strong>Horario de Atención:</strong> {{ sede.HORARIO_ATENCION }}</p>
+          <img [src]="sede.IMAGEN" alt="{{ sede.NOMBRE }}" />
+        </ion-card>
+        <hr>
+      </div>  
+    </div>
+
+</ion-content>
+
